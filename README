@@ -1,0 +1,50 @@
+Biodiversity
+
+Intro
+The goal of this project is to be able to rewrite code so that it is harder for the attacker to exploit the code reliably. This is done by changing the code. Consider it ASLR on crack. How useful it is, is another matter, it depends how people are getting around ASLR, if they are discovering a libraries address in some fashion, it is not useful if they are JIT spraying. Possibly it would only be used by the most security conscious, as it might have some performance overhead.
+
+It would be especially good at making return oriented programming hard. Return oriented programming relies on know where sets of instructions are, it sets up the stack so that it has lists of the required instructions on them and hops around performing the instructions and "return"ing to the next instruction.
+
+Anyway it is interesting and I want to hack on something and may prove useful depending upon the exploit ecosystem.
+
+
+Problem
+
+So what is the issue? Why hasn't it beend done. When you modify code, you might make code that references point to the wrong place. So you have to know how to be able to modify the code so it keeps the same operational effects. There are two ways you can attempt to do this. Decompile the code and modify the assembler and recompile or store meta data about the code to allow changes without explicit knowledge of what the code is doing.
+
+This is similar to relocatable code, but taken to the next level.
+
+
+
+Further Intro
+One of the most 
+
+
+
+Buffer overflows rely on knowing where 
+
+Return oriented programming
+
+Address space layout randomisation, might help this if the requisite
+
+
+
+
+heap over flow
+
+
+It is easier for metamorphic virus to work on the assembler code, as then changes can be made. Self-modifying code
+
+Position Independent code
+
+Addresses can be relative or absolute.
+
+
+Possi
+
+
+Random References
+
+http://blog.fortinet.com/jit-spraying-in-pdf/
+Tyler Durden. Bypassing PaX ASLR protection. Phrack, Volume 0x0b, Issue 0x3b, Phile 0x09.
+
